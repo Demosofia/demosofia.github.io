@@ -1,0 +1,71 @@
+h1 {
+    color: rgb(112, 19, 112);
+    font: size 20;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+    background-color: rgb(39, 72, 143);
+    color: white;
+    font-size: 18pt;
+}
+
+td:first-child {
+    text-align: right;
+    padding-right: 10px;
+}
+
+td {
+    background-color: rgb(212, 220, 233);
+    font-size: 12pt;
+    border: 1px rgb(112, 19, 112) solid;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(162, 208, 216);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    width: 80%;
+    background-color: rgb(220, 228, 230);
+    margin: auto;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 0px;
+}
+
+.menu li {
+    display: inline-block;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.links {
+    width: 80%;
+    margin: auto;
+    padding-left: 180px;
+
+}
+.links a {
+    width:50px;
+    vertical-align: middle;
+    
+}
+.links img {
+ width:7%;
+ border:0;
+ padding-right: 30px;
+
+}

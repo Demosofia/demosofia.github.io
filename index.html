@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Página de Sofía </title>
+    <meta name="description" content="página de inicio personal">
+    <meta name="keywords" contents="aula virtual, horario, IES Rosalía de Castro">
+    <meta name="author" content="Sofía O'Donnell">
+    <link rel="stylesheet" type="text/css" href="style_sofia.css" />
+    <link rel="stylesheet" type="text/css" href="todo.css" />
+    <script src="todo.js"></script>
+</head>
+
+<body onload="inject()" onunload="eject()">
+    <div class="container">
+        <h1>Página de Sofía</h1>
+
+        <ul class="menu">
+            <li> <a href="https://www.iesrosalia.net" target="_blank">Página del IES Rosalía</a></li>
+            <li> <a href="https://www.edu.xunta.gal/centros/iesrosaliacastro/aulavirtual2/" target="_blank"> Aula virtual Moodle</a> </li>
+            <li> <a href="https://classroom.google.com/u/0/h?hl=es" target="_blank">Google Classroom</a></li>
+            <li> <a href="https://drive.google.com/drive/u/3/my-drive" target="_blank">Google Drive</a></li>
+            <li> <a href="https://calendar.google.com/calendar/b/3/r?tab=rc" target="_blank">Google Calendar</a></li>
+        </ul>
+
+        <table>
+
+            <tr>
+                <th> Hora </th>
+                <th> Lunes </th>
+                <th> Martes </th>
+                <th> Miércoles </th>
+                <th> Jueves </th>
+                <th> Viernes </th>
+            </tr>
+            <tr>
+                <td> 10:30-11:00 </td>
+                <td> Matemáticas <a href="https://meet.google.com/pzk-oxdx-dco" target="_blank">(G.Meet)</a></li>
+                </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td> 10:40-11:30 </td>
+                <td> </td>
+                <td> TIC <a href="https://meet.google.com/wpo-hpbu-ooa" target="_blank">(G.Meet)</a></li>
+                </td>
+                <td> Castellano </td>
+                <td> Matemáticas <a href="https://meet.google.com/rip-eqgv-qsv" target="_blank">(G.Meet)</a></li>
+                    <td> </td>
+
+            </tr>
+            <tr>
+                <td> 11:55-12:45 </td>
+                <td> Tecnología <a href="https://meet.google.com/wpo-hpbu-ooa" target="_blank">(G.Meet)</a></li>
+                    <td> </td>
+                    <td> Gallego </td>
+                    <td> Física </td>
+                    <td> </td>
+            </tr>
+            <tr>
+                <td> 12:45-13:35 </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td>Tecnología <a href="https://meet.google.com/wpo-hpbu-ooa" target="_blank">(G.Meet)</a></li>
+                    <td> </td>
+            </tr>
+            <tr>
+                <td> 13:35-14:25 </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> Educación Física </td>
+                <td> Inglés </td>
+            </tr>
+            <tr>
+                <td> 16:50-17:40 </td>
+                <td> Filosofía </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+        </table>
+
+        <h3> Paginas de interes </h3>
+        <ul type="list-style-type:circle" class="links">
+            <a href="https://dle.rae.es/" target="_blank"><img src="https://www.rae.es/sites/default/files/rae.png" alt="Diccionario Real Academia Española" style="width:15%"></a>
+            <a href="https://academia.gal/dicionario/rag" target="_blank"><img src="https://academia.gal/rag-theme/images/rag/simboloAcademia.png" alt="Dicionario Real Academia Galega" style="width:15%"></a>
+            <a href="https://www.wikipedia.org/" target="_blank"><img src="Wikipedia.jpeg" alt="Wikipedia"></a>
+            <a href="https://www.wordreference.com/" target="_blank"><img src="Wordreference.jpg" alt="Word Reference"></a>
+            <a href="https://abcsdebuxo.weebly.com/debuxo-teacutecnico.html" target="_blank"><img src="abc.png" alt="ABCsDEbuxo" style="width:15%"></a>
+            <a href="https://www.w3schools.com/html/" target="_blank"><img src="sc.png" alt="w3schools"></a>
+        </ul>
+        <hr>
+        <ul>
+            <li>fytrvh</li>
+            <li>dfh</li>
+            <li>dfh</li>
+            <li>dfh</li>
+        </ul>
+        <hr>
+
+        <button onclick="newCard()">Nueva</button>
+        <button onclick="syncUp()">Subir a la nube</button>
+        <button onclick="syncDown()">Descargar de la nube</button>
+        <button onclick="reset()">Borrar</button>
+        <div class="row">
+          <div class="column center">TO DO</div>
+          <div class="column center">DOING</div>
+          <div class="column center">DONE</div>
+        </div>
+        <div class="row">
+          <div id="todo" class="column full-height">
+            <div
+              id="todo1"
+              class="subcolumn"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ontouchend="allowDrop(event)"
+            ></div>
+            <div
+              id="todo2"
+              class="subcolumn"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ontouchend="allowDrop(event)"
+            ></div>
+          </div>
+          <div id="doing" class="column full-height">
+            <div
+              id="doing1"
+              class="subcolumn"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ontouchend="allowDrop(event)"
+            ></div>
+            <div
+              id="doing2"
+              class="subcolumn"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ontouchend="allowDrop(event)"
+            ></div>
+          </div>
+          <div id="done" class="column full-height">
+            <div
+              id="done1"
+              class="subcolumn"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ontouchend="allowDrop(event)"
+            ></div>
+            <div
+              id="done2"
+              class="subcolumn"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ontouchend="allowDrop(event)"
+            ></div>
+          </div>
+        </div>
+    
+        <datalist id="colors">
+          <option value="#90ee90">Green</option>
+          <option value="#6495ed">Blue</option>
+          <option value="#ff6f6f">Red</option>
+          <option value="#ff69b4">Pink</option>
+          <option value="yellow">Yellow</option>
+        </datalist>
+        <datalist id="subjects">
+          <option value="TIC"> </option>
+          <option value="Dibujo"> </option>
+          <option value="Castellano"> </option>
+          <option value="Gallego"> </option>
+          <option value="Inglés"> </option>
+          <option value="Matemáticas"> </option>
+          <option value="Física y Quimica"> </option>
+          <option value="Tecnología"> </option>
+          <option value="Filosofía"> </option>
+          <option value="Educación Física"> </option>
+        </datalist>
+    </div>
+</body>
+
+</html>
